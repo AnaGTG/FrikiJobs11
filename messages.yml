@@ -1,0 +1,57 @@
+# =========================================================
+#             FrikiJobs - Archivo de Mensajes
+# =========================================================
+# Soporta todos los códigos de color tradicionales de Minecraft (&a, &e, &6, &c, &b, &d, &l, etc.)
+# Variables disponibles explicadas en cada sección.
+
+no_permission: "&cNo tienes permiso para ejecutar este comando."
+must_be_player: "&cEste comando solo puede ser ejecutado por un jugador."
+player_not_found: "&cEl jugador '{player}' no ha sido encontrado."
+job_not_found: "&cEl trabajo '{job}' no existe."
+invalid_tier: "&cEl tier '{tier}' no es válido. Usa: TI, TII, TIII, TIV, TV, TVI o TVII."
+no_job_active: "&cEl jugador {player} no tiene un trabajo asignado."
+config_reloaded: "&a[FrikiJobs] Configuración y mensajes recargados correctamente."
+
+# Alertas de Acción (ActionBar) al recibir paga
+# Variables: {job_name}, {tier}, {money}, {xp}
+actionbar_reward: "&6[{job_name} &e{tier}&6] &a+${money} &b(+{xp} XP)"
+
+# Mensajes de Hitos de Dinero Acumulado (Chat)
+# Variables: {amount}
+milestone_message:
+  - "&6================================================="
+  - "&e🎉 ¡Felicidades! &aHas alcanzado &e${amount} &aganados en este trabajo."
+  - "&7¡Sigue trabajando duro para subir de Tier!"
+  - "&6================================================="
+
+# Mensajes al renunciar o cambiar de empleo
+# Variables: {penalty}, {tier}, {job_name}
+quit_success:
+  - "&c================================================="
+  - "&c⚠ Has abandonado tu trabajo actual."
+  - "&eSe te han descontado ${penalty} de multa."
+  - "&4Tu nivel ({tier}) ha sido reiniciado. Si vuelves a unirte a un empleo, comenzarás en Tier I."
+  - "&c================================================="
+
+quit_not_enough_money: "&c[FrikiJobs] No tienes suficiente dinero para pagar la multa de ${penalty}."
+
+join_success:
+  - "&a================================================="
+  - "&a¡Te has unido al trabajo de {job_name}!"
+  - "&eHas comenzado tu carrera en Tier I."
+  - "&a================================================="
+
+switch_success:
+  - "&a================================================="
+  - "&a¡Te has unido al trabajo de {job_name}!"
+  - "&c⚠ Al cambiar de empleo, tu nivel anterior ({old_tier}) ha sido reiniciado. Ahora estás en Tier I."
+  - "&a================================================="
+
+# Información personal (/jobs info)
+# Variables: {job_name}, {tier}
+job_info_header: "&6========== [ &eTu Información de Trabajo &6] =========="
+job_info_name: "&7💼 Trabajo Actual: &a{job_name}"
+job_info_tier: "&7⭐ Tier / Nivel Actual: &b{tier}"
+job_info_status: "&7📝 Estado: &aActivo"
+job_info_footer: "&6==============================================="
+job_info_none: "&e[FrikiJobs] &cActualmente no tienes ningún trabajo asignado.\n&7Usa &6/jobs &7para elegir un empleo."
